@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <h1>Leaderboard</h1>
+    <div id="leaderboard"></div>
+
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            displayLeaderboard();
+        };
+
+        function displayLeaderboard() {
+            // Simulate fetching leaderboard data from server or local storage
+            const leaderboardData = [
+                { name: "Player 1", score: 8 },
+                { name: "Player 2", score: 7 },
+                { name: "Player 3", score: 6 },
+                { name: "Player 4", score: 5 },
+                { name: "Player 5", score: 4 },
+            ];
+
+            const leaderboardElement = document.getElementById('leaderboard');
+            leaderboardElement.innerHTML = '';
+
+            leaderboardData.forEach((player, index) => {
+                const playerEntry = document.createElement('div');
+                playerEntry.textContent = `${index + 1}. ${player.name}: ${player.score}`;
+                leaderboardElement.appendChild(playerEntry);
+            });
+        }
+    </script>
+</body>
+</html>

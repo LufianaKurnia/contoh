@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .question {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .options {
+        display: inline-block;
+    }
+    .option {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    .option:hover {
+        background-color: #e0e0e0;
+    }
+    #result {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    #loginForm {
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+<h1>Game Quiz</h1>
+
+<!-- Login Form -->
+<form id="loginForm">
+    <label for="name">Nama:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="class">Kelas:</label>
+    <input type="text" id="class" name="class" required>
+    <br><br>
+    <button type="button" onclick="startQuiz()">Mulai Quiz</button>
+    <button type="button" onclick="showLeaderboard()">Leaderboard</button>
+</form>
+
+<div class="question" id="question" style="display: none;">Pertanyaan</div>
+<div class="options" id="options" style="display: none;"></div>
+<div id="result" style="display: none;"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
